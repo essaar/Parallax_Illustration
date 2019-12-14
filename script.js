@@ -8,79 +8,79 @@ var load_counter = 0;
 
 //Initialize images for layers
 var background = new Image();
-var pCircle = new Image();
-var rCircle = new Image();
+var stars1 = new Image();
+var stars2 = new Image();
+var planet1 = new Image();
+var planet2 = new Image();
+var planet3 = new Image();
 var shadow = new Image();
 var mask = new Image();
-var oCircle = new Image();
-var yCircle = new Image();
-var floaties = new Image();
 
 //Create a list of layer objects
 var layer_list = [
 	{
 		'image': background,
-		'src': './images/IMG_0223.png',
+		'src': './images/background.png',
+		'z_index': -3,
+		'position': {x: 0, y: 0},
+		'blend': null,
+		'opacity': 1
+	},
+	{
+		'image': stars1,
+		'src': './images/stars1.png',
+		'z_index': -2.5,
+		'position': {x: 0, y: 0},
+		'blend': null,
+		'opacity': 1
+	},
+	{
+		'image': stars2,
+		'src': './images/stars2.png',
 		'z_index': -2,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
 	},
 	{
-		'image': pCircle,
-		'src': './images/IMG_0227.png',
-		'z_index': -1.0,
-		'position': {x: 0, y: 0},
-		'blend': 'overlay',
-		'opacity': 1
-	},
-	{
-		'image': rCircle,
-		'src': './images/IMG_0229.png',
-		'z_index': -0.5,
+		'image': planet1,
+		'src': './images/planet1.png',
+		'z_index': -1.5,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
 	},
 	{
-		'image': shadow,
-		'src': './images/IMG_0224.png',
-		'z_index': -1.25,
-		'position': {x: 0, y: 0},
-		'blend': 'multiply',
-		'opacity': 1
-	},
-	{
-		'image': mask,
-		'src': './images/IMG_0226.png',
-		'z_index': 0,
+		'image': planet2,
+		'src': './images/planet2.png',
+		'z_index': -1,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
     },
 	{
-		'image': oCircle,
-		'src': './images/IMG_0222.png',
-		'z_index': 0.3,
+		'image': planet3,
+		'src': './images/planet3.png',
+		'z_index': -0.5,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
 	},
+	// {
+	// 	'image': shadow,
+	// 	'src': './images/shadow.png',
+	// 	'z_index': 0,
+	// 	'position': {x: 0, y: 0},
+	// 	'blend': 'multiply',
+	// 	'opacity': 1
+	// },
 	{
-		'image': yCircle,
-		'src': './images/IMG_0225.png',
+		'image': mask,
+		'src': './images/mask.png',
 		'z_index': 1,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
-	},
-	{
-		'image': floaties,
-		'src': './images/IMG_0228.png',
-		'z_index': 2,
-		'position': {x: 0, y: 0},
-		'blend': 'overlay',
-		'opacity': 0.9
 	}
 ];
 
